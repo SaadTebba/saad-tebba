@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allison Parker - Portfolio</title>
+    <style>
+        /* Google Font Import - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Reset and Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0D23; /* Dark blue/purple background */
+            color: #E0E0E0; /* Light gray text */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Prevents bottom space under images */
+        }
+
+        a {
+            text-decoration: none;
+            color: #7F00FF; /* Purple accent */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        .main-header {
+            background-color: #0A0D23; /* Same as body or slightly different if needed */
+            padding: 15px 0;
+            position: fixed; /* Fixed header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure header is above other content */
+            border-bottom: 1px solid #1A1C3A; /* Subtle border */
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0; /* Remove container's default padding for header */
+            padding-bottom: 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .logo span {
+            color: #7F00FF; /* Purple dot or part of logo */
+        }
+
+        .main-nav ul {
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 25px;
+        }
+
+        .main-nav ul li a {
+            color: #D0D0D0;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0; /* Add some padding for easier clicking */
+        }
+
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: #7F00FF;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-cv {
+            background-color: #7F00FF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            margin-left: 20px; /* Ensure spacing from nav or hamburger */
+            white-space: nowrap; /* Prevent button text from wrapping */
+        }
+
+        .btn-cv:hover {
+            background-color: #6A0DAD; /* Darker purple */
+        }
+
+        .menu-toggle {
+            display: none; /* Hidden on desktop */
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.8em;
+            cursor: pointer;
+            padding: 5px; /* Make it easier to tap */
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 120px; /* Adjust for fixed header height + some space */
+            padding-bottom: 60px;
+            background-color: #0A0D23; /* Match header or body */
+            position: relative; /* For positioning pseudo-elements */
+            overflow: hidden; /* For the large 'A' and burst if they go outside bounds */
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px; /* Add gap between content and image */
+        }
+
+        .hero-content {
+            flex: 1; /* Allow content to take available space */
+            max-width: 55%; /* Limit width of text content */
+            position: relative; /* For z-index stacking with background char */
+            z-index: 2;
+        }
+
+        .hero-content .large-char-background {
+            position: absolute;
+            font-size: 25em; /* Adjust as needed */
+            font-weight: 700;
+            color: rgba(26, 28, 58, 0.5); /* Very subtle dark blue/purple */
+            top: 50%;
+            left: -80px; /* Adjust for positioning, can be negative */
+            transform: translateY(-50%);
+            z-index: -1; /* Behind the text content */
+            user-select: none; /* Prevent text selection */
+            line-height: 1; /* Ensure tight line height */
+        }
+
+
+        .hero-content .hello-text {
+            font-size: 1.2em;
+            color: #A0A0B0;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero-content .job-title {
+            font-size: 1.5em;
+            color: #B0B0C0;
+            margin-bottom: 25px;
+        }
+
+        .hero-contact-info p {
+            margin-bottom: 8px;
+            color: #A0A0B0;
+            font-size: 0.95em;
+        }
+        .hero-contact-info p strong {
+            color: #D0D0D0;
+        }
+
+        .social-links {
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: inline-flex; /* Use flex for centering icon if using SVG/Font Icon */
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1A1C3A; /* Darker background for icons */
+            color: #FFFFFF;
+            margin-right: 10px;
+            font-size: 1.1em; /* For text icons, adjust if using actual icons */
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #7F00FF;
+        }
+
+        .hero-image-container {
+            flex-basis: 40%; /* Define a base size for the image container */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-container .profile-img {
+            width: 300px; /* Adjust size as needed */
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover; /* Ensure image covers the area without distortion */
+            border: 5px solid rgba(127, 0, 255, 0.5); /* Purple glow/border */
+            box-shadow: 0 0 25px rgba(127, 0, 255, 0.3);
+            position: relative; /* Ensure image is above the burst */
+            z-index: 1;
+        }
+        
+        .hero-image-container .radial-burst {
+            position: absolute;
+            width: 500px; /* Adjust size for the burst effect */
+            height: 500px; /* Adjust size */
+            /* A simplified representation of the radial lines using gradients */
+            background-image: radial-gradient(circle, rgba(127,0,255,0.3) 0%, rgba(127,0,255,0.1) 40%, rgba(10,13,35,0) 70%);
+            z-index: 0; /* Behind the profile image */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the burst */
+            border-radius: 50%; /* Make it circular */
+        }
+
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0; /* Increased padding */
+            background-color: #101430; /* Slightly lighter dark background */
+        }
+        
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 50px; /* Increased margin */
+        }
+
+        .section-subtitle {
+            color: #7F00FF;
+            font-weight: 500;
+            margin-bottom: 8px; /* Increased margin */
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px; /* Add some letter spacing */
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px; /* Increased gap */
+            align-items: flex-start; /* Align items at the top */
+        }
+
+        .about-details {
+            flex-basis: 55%;
+        }
+
+        .about-details ul li {
+            margin-bottom: 18px; /* Increased margin */
+            font-size: 1em;
+            color: #D0D0D0;
+            border-bottom: 1px solid #1A1C3A; /* Subtle separator */
+            padding-bottom: 12px; /* Increased padding */
+            display: flex; /* For better alignment of strong and value */
+            justify-content: space-between;
+        }
+        .about-details ul li:last-child {
+            border-bottom: none;
+        }
+
+        .about-details ul li strong {
+            color: #FFFFFF;
+            min-width: 100px; /* Ensure label has enough space */
+            margin-right: 15px; /* Space between label and value */
+            font-weight: 500;
+        }
+        .about-details ul li span {
+            text-align: right; /* Align value to the right */
+            color: #A0A0B0; /* Slightly dimmer color for values */
+        }
+
+
+        .about-image {
+            flex-basis: 45%;
+        }
+
+        .about-image img {
+            border-radius: 8px;
+            object-fit: cover;
+            width: 100%; /* Make image responsive within its container */
+            height: 350px; /* Fixed height for consistency, adjust as needed */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Add a subtle shadow */
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 80px 0; /* Increased padding */
+            background-color: #0A0D23;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted minmax */
+            gap: 30px;
+        }
+
+        .skill-item {
+            background-color: #101430;
+            padding: 30px 25px; /* Adjusted padding */
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #1A1C3A;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(127, 0, 255, 0.1);
+        }
+
+        .skill-item .percentage {
+            font-size: 3em;
+            font-weight: 700;
+            color: #7F00FF; /* Purple */
+            margin-bottom: 10px;
+        }
+        
+        .skill-item .skill-name {
+            font-size: 1.1em;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+
+        /* Footer (Basic) */
+        .main-footer {
+            text-align: center;
+            padding: 40px 0; /* Increased padding */
+            background-color: #0A0D23;
+            border-top: 1px solid #1A1C3A;
+            color: #A0A0B0;
+            font-size: 0.9em;
+        }
+        
+
+        /* Responsive Design */
+        @media (max-width: 992px) { /* Tablet and larger mobile */
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            .hero-content .large-char-background {
+                font-size: 20em; /* Adjust for smaller screens */
+                left: 50%;
+                transform: translate(-50%, -50%);
+                top: 30%; /* Adjust vertical position */
+            }
+            .hero-image-container {
+                margin-top: 30px;
+            }
+            .hero-image-container .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+            .hero-image-container .radial-burst {
+                width: 400px;
+                height: 400px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+            .about-details, .about-image {
+                flex-basis: 100%; /* Full width for stacked items */
+            }
+            .about-image {
+                margin-top: 30px;
+            }
+             .about-details ul li {
+                justify-content: flex-start; /* Align items to start on mobile */
+            }
+            .about-details ul li span {
+                text-align: left; /* Align value to left on mobile */
+                flex-grow: 1; /* Allow value to take remaining space */
+            }
+        }
+
+        @media (max-width: 768px) { /* Mobile devices */
+            .main-nav {
+                display: none; /* Hide nav links by default on mobile */
+                position: absolute;
+                top: 100%; /* Position below the header */
+                left: 0;
+                width: 100%;
+                background-color: #101430; /* Mobile menu background */
+                padding: 10px 0;
+                border-top: 1px solid #1A1C3A;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Add shadow to mobile menu */
+            }
+            .main-nav.active {
+                display: block; /* Show when active */
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-nav ul li {
+                margin: 10px 0;
+                margin-left: 0; /* Reset margin */
+            }
+            .menu-toggle {
+                display: block; /* Show hamburger icon */
+            }
+            /* Optional: Hide CV button from header on small mobile if menu has it, or adjust its size/position */
+            /* .header-actions .btn-cv { display: none; } */
+            
+            .hero-content h1 {
+                font-size: 2.5em; /* Adjust font size for mobile */
+            }
+            .hero-content .job-title {
+                font-size: 1.3em;
+            }
+            .hero-content .large-char-background {
+                font-size: 15em; /* Further reduce for small screens */
+                top: 25%;
+            }
+            .hero-image-container .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+            .hero-image-container .radial-burst {
+                width: 300px;
+                height: 300px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller cards */
+            }
+            .about-image img {
+                height: 280px; /* Adjust image height on mobile */
+            }
+        }
+         @media (max-width: 480px) { /* Very small mobile devices */
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .hero-content .job-title {
+                font-size: 1.1em;
+            }
+            .hero-content .large-char-background {
+                font-size: 12em;
+                top: 20%;
+            }
+            .btn-cv {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            .logo {
+                font-size: 1.5em;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr; /* Stack skills on very small screens */
+            }
+         }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">rix<span>.</span></a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-cv">Download CV</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+                    &#9776; <!-- Hamburger Icon -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="large-char-background">A</span>
+                    <p class="hello-text">HELLO I'M</p>
+                    <h1>Allison Parker</h1>
+                    <p class="job-title">Web Designer & Photographer</p>
+                    <div class="hero-contact-info">
+                        <p><strong>infoname@domain.com</strong></p>
+                        <p>36 East 8th Street, New York, NY 10003, United States</p>
+                    </div>
+                    <div class="social-links">
+                        <!-- Replace text with actual SVG icons or font icons for production -->
+                        <a href="#" aria-label="Facebook">f</a> 
+                        <a href="#" aria-label="Twitter">t</a> 
+                        <a href="#" aria-label="Vimeo">v</a> 
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="radial-burst"></div>
+                    <!-- Placeholder image - replace with actual image -->
+                    <img src="https://placehold.co/300x300/7F00FF/FFFFFF?text=AP&font=poppins" alt="Allison Parker" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-title-container">
+                    <p class="section-subtitle">WHO I AM</p>
+                    <h2 class="section-title">About My Resume</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-details">
+                        <ul>
+                            <li><strong>Age:</strong><span>29</span></li>
+                            <li><strong>Residence:</strong><span>USA</span></li>
+                            <li><strong>Address:</strong><span>88 Some Street, Some Town</span></li>
+                            <li><strong>E-mail:</strong><span>email@example.com</span></li>
+                            <li><strong>Phone:</strong><span>+0123 123 456 789</span></li>
+                            <li><strong>Freelance:</strong><span>Available</span></li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <!-- Placeholder image - replace with actual image -->
+                        <img src="https://placehold.co/600x400/101430/FFFFFF?text=Team+Meeting" alt="About me - group photo showing a team discussion">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="services"> <!-- Assuming skills relate to services -->
+            <div class="container">
+                <!-- Optional: Title for skills section if needed, not explicitly in image above grid -->
+                <div class="section-title-container">
+                     <p class="section-subtitle">MY CAPABILITIES</p>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="percentage">50%</div>
+                        <div class="skill-name">Graphic Design</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="percentage">75%</div>
+                        <div class="skill-name">Development</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="percentage">38%</div>
+                        <div class="skill-name">Marketing Ideas</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="percentage">63%</div>
+                        <div class="skill-name">Web Management</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Allison Parker. All rights reserved. Designed by Orix.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = mainNav.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', isExpanded);
+                
+                // Optional: Change hamburger icon to 'X' and back for visual feedback
+                if (isExpanded) {
+                    menuToggle.innerHTML = '&times;'; // 'X' symbol
+                    menuToggle.setAttribute('aria-label', 'Close menu');
+                } else {
+                    menuToggle.innerHTML = '&#9776;'; // Hamburger symbol
+                    menuToggle.setAttribute('aria-label', 'Open menu');
+                }
+            });
+
+            // Optional: Close menu when a nav link is clicked (for SPA-like behavior)
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        menuToggle.innerHTML = '&#9776;';
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.setAttribute('aria-label', 'Open menu');
+                    }
+                });
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Calculate offset for fixed header
+                    const headerOffset = document.querySelector('.main-header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
