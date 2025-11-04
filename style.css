@@ -155,10 +155,6 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
 }
 
 
@@ -784,7 +780,8 @@ main {
   } */
 
   /* .main-text-100vh {
-    font-size: 3rem;
+    width: 450px;
+    height: auto;
   } */
 
   /* .login-box {
@@ -868,11 +865,16 @@ main {
   .breadcrumbs {
     display: block;
   }
+    .main-text-100vh {
+    width: 700px;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .main-text-100vh {
-    font-size: 2rem;
+    width: 550px;
+    height: auto;
   }
 
   /* .login-box {
