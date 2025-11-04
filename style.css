@@ -82,6 +82,9 @@ main {
 
 /** :::::::::: Breadcrumbs Menu :::::::::: **/
 
+.breadcrumbs {
+  display: none;
+}
 
 #checkbox {
   display: none;
@@ -96,9 +99,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
   transition-duration: .5s;
-  right: 45px;
 }
 
 .bars {
@@ -112,33 +114,34 @@ main {
   transition-duration: .8s;
 }
 
-#bar1,#bar3 {
+#bar1,
+#bar3 {
   width: 70%;
 }
 
-#checkbox:checked + .toggle .bars {
+#checkbox:checked+.toggle .bars {
   position: absolute;
   transition-duration: .5s;
 }
 
-#checkbox:checked + .toggle #bar2 {
+#checkbox:checked+.toggle #bar2 {
   transform: scaleX(0);
   transition-duration: .5s;
 }
 
-#checkbox:checked + .toggle #bar1 {
+#checkbox:checked+.toggle #bar1 {
   width: 100%;
   transform: rotate(45deg);
   transition-duration: .5s;
 }
 
-#checkbox:checked + .toggle #bar3 {
+#checkbox:checked+.toggle #bar3 {
   width: 100%;
   transform: rotate(-45deg);
   transition-duration: .5s;
 }
 
-#checkbox:checked + .toggle {
+#checkbox:checked+.toggle {
   transition-duration: .5s;
   transform: rotate(180deg);
 }
@@ -686,8 +689,8 @@ main {
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
   top: -20px;
   left: 0;
   color: #bdb8b8;
@@ -780,7 +783,7 @@ main {
     width: 60%;
   } */
 
-/* .main-text-100vh {
+  /* .main-text-100vh {
     font-size: 3rem;
   } */
 
@@ -856,9 +859,14 @@ main {
   .portfolio-img {
     height: 200px;
   }
+
   .bg-img-100vh {
     height: 100vh;
     object-fit: cover;
+  }
+
+  .breadcrumbs {
+    display: block;
   }
 }
 
@@ -888,5 +896,9 @@ main {
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border-radius: 5px;
+  }
+
+  .breadcrumbs {
+    display: block;
   }
 }
