@@ -8,6 +8,11 @@
   max-width: 100%;
 }
 
+html, body {
+  overscroll-behavior-y: none;
+  background-color: #0d0d0d; 
+}
+
 main {
   background-color: #040619;
   color: white;
