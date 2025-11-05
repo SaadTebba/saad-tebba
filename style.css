@@ -288,6 +288,15 @@ main {
   flex-direction: column;
 }
 
+.cards-container {
+  margin-left: 0 !important;
+}
+
+/* .services-cardy {
+  min-width: 500px;
+  background-color: #25D366;
+} */
+
 .cardy:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(127, 0, 255, 0.1);
@@ -744,9 +753,18 @@ main {
     padding: 0 !important;
     margin-bottom: 20px;
   }
+
+  .my-info-span {
+    position: absolute;
+    left: 25%;
+  }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
+  #about .row {
+    flex-direction: column;
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -763,12 +781,21 @@ main {
     display: flex;
     flex-direction: column;
   }
-}
 
-@media screen and (max-width: 992px) {
-  #about .row {
-    flex-direction: column;
+  .my-info-span {
+    position: absolute;
+    left: 40%;
   }
+
+  .about-me-img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 390px;
+  }
+
+  /* .services-cardy {
+    margin-bottom: 20px;
+  } */
 }
 
 @media screen and (max-width: 767px) {
@@ -781,22 +808,6 @@ main {
   .row .col-3 {
     width: 100%;
     display: flex;
-  }
-
-  .row .col-3 .cardy {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .my-info-span {
-    position: relative;
-    left: 0;
-    margin-left: 15px;
-  }
-
-  .about-us-content {
-    margin-bottom: 5px;
   }
 
   .social-buttons {
@@ -829,6 +840,22 @@ main {
   .row.cards-container .media-queries-paddings {
     padding: 0px !important;
   }
+
+  #about .row {
+    flex-direction: column;
+  }
+
+  .my-info-span {
+    position: absolute;
+    left: 40%;
+  }
+
+  .about-me-img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 390px;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -856,4 +883,22 @@ main {
     object-fit: cover;
     object-position: top;
   }
+
+  .modal-body .row {
+    margin-bottom: 0 !important;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  /* .card-titles {
+    font-size: 1.25rem;
+  } */
+  p {
+    font-size: 0.95rem;
+  }
+
 }
