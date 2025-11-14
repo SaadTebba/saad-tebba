@@ -93,30 +93,34 @@ function sendMail() {
         });
 }
 
+(function () {
+    emailjs.init({
+        publicKey: "UObm9ayr9BB7Cx7kb",
+    });
+})();
 
 // TODO ========================= Smooth Scrolling ==============================
 
 
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 700, function(){
-        window.location.hash = hash;
-      });
-    } // End if
-  });
+$(document).ready(function () {
+    $("a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 700, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
 });
 
 
 // TODO ========================= Mobile Menu Toggle ==============================
 
 
-// Mobile Menu Toggle
-document.getElementById('checkbox').addEventListener('change', function() {
+document.getElementById('checkbox').addEventListener('change', function () {
     const navbarCollapse = document.querySelector('.navbar-collapse');
     if (this.checked) {
         navbarCollapse.classList.add('show');
@@ -125,7 +129,6 @@ document.getElementById('checkbox').addEventListener('change', function() {
     }
 });
 
-// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         const checkbox = document.getElementById('checkbox');

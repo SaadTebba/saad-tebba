@@ -315,6 +315,7 @@ main {
 
 .card-bodies {
   font-size: 15px;
+  margin: 0px !important;
 }
 
 .bg-icons {
