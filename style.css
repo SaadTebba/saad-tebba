@@ -8,9 +8,10 @@
   max-width: 100%;
 }
 
-html, body {
+html,
+body {
   overscroll-behavior-y: none;
-  background-color: #0d0d0d; 
+  background-color: #0d0d0d;
 }
 
 main {
@@ -212,8 +213,12 @@ main {
   padding-top: 25px;
 }
 
+/* Navbar Collapse - Transparent Background */
+.navbar-collapse {
+  background-color: transparent !important;
+}
+
 #mainNav.navbar-scrolled {
-  background-color: rgba(255, 255, 255, 1);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(10px);
@@ -475,11 +480,18 @@ main {
 
 .button-back-to-top::before {
   position: absolute;
-  right: -20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   content: "Back to Top";
   color: white;
   font-size: 0;
   transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.button-back-to-top:hover::before {
+  font-size: 13px;
 }
 
 .button-back-to-top:hover {
@@ -495,8 +507,6 @@ main {
 .button-back-to-top:hover::before {
   font-size: 13px;
   opacity: 1;
-  right: unset;
-  left: 40px;
 }
 
 .this-is-for-test {
@@ -696,14 +706,43 @@ main {
 }
 
 .contact-form .input-box input:focus~label,
-.contact-form .input-box input:valid~label {
+.contact-form .input-box input:valid~label,
+.contact-form .input-box input[type="email"]:not(:placeholder-shown)~label {
   top: -20px;
   left: 0;
   color: #bdb8b8;
   font-size: 12px;
 }
 
-.contact-form form a {
+/* Reusable Button Style */
+.styled-button-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  /* Ensure cursor pointer */
+}
+
+.styled-button-link:hover {
+  background: #6428E3;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #6428E3,
+    0 0 25px #6428E3,
+    0 0 50px #6428E3,
+    0 0 100px #6428E3;
+}
+
+.contact-form form a,
+.styled-button-link {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -717,7 +756,8 @@ main {
   letter-spacing: 4px
 }
 
-.contact-form form a:hover {
+.contact-form form a:hover,
+.styled-button-link:hover {
   background: #6428E3;
   color: #fff;
   border-radius: 5px;
@@ -801,6 +841,78 @@ main {
   }
 }
 
+/* ! Dynamic Projects Styling ============================================================================= */
+
+.read-more-text {
+  color: #6428E3;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.read-more-text:hover {
+  color: #8c52ff;
+}
+
+.cardy:hover .read-more-text {
+  text-decoration: underline;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.portfolio-img {
+  transition: transform 0.5s ease;
+}
+
+.cardy:hover .portfolio-img {
+  transform: scale(1.05);
+}
+
+/* ! Animation Effects ============================================================================= */
+
+.cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(100, 40, 227, 0.5);
+  /* Purple semi-transparent */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.5s linear forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+/* Ensure modal images fit well */
+.modals-content-images {
+  object-fit: cover !important;
+  height: 100% !important;
+}
+
+/* Load More Button Visibility */
+#load-more-btn {
+  transition: all 0.5s ease;
+}
+
+
 .submit-button span:nth-child(4) {
   bottom: -100%;
   left: 0;
@@ -827,6 +939,24 @@ main {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.submit-button a:hover {
+  background: #6428E3;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #6428E3,
+    0 0 25px #6428E3,
+    0 0 50px #6428E3,
+    0 0 100px #6428E3;
 }
 
 .submit-button span {
@@ -834,6 +964,76 @@ main {
   display: block;
 }
 
+
+/* Standardized Styled Button (matches Submit & Load More) */
+.styled-button-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #6428E3;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border: 1px solid transparent;
+  /* Optional: to match sizing if needed */
+}
+
+.styled-button-link:hover {
+  background: #6428E3;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #6428E3,
+    0 0 25px #6428E3,
+    0 0 50px #6428E3,
+    0 0 100px #6428E3;
+}
+
+.styled-button-link span {
+  position: absolute;
+  display: block;
+}
+
+.styled-button-link span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6428E3);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+.styled-button-link span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #6428E3);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+
+.styled-button-link span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #6428E3);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+.styled-button-link span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #6428E3);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
 
 /*! Media Quieries ============================================================================= **/
 
@@ -1008,4 +1208,83 @@ main {
     font-size: 0.95rem;
   }
 
+
+}
+
+/* Custom Read More Button Style */
+.custom-read-more-btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0.6;
+  text-decoration: none !important;
+  color: inherit;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.custom-read-more-btn::after {
+  content: '';
+  border-bottom: 3px double #6428E3;
+  /* Purple color */
+  width: 0;
+  height: 100%;
+  position: absolute;
+  margin-top: -5px;
+  top: 0;
+  left: 5px;
+  visibility: hidden;
+  opacity: 1;
+  transition: .2s linear;
+}
+
+.custom-read-more-btn .icon {
+  transform: translateX(0%);
+  transition: .2s linear;
+  animation: attention 1.2s linear infinite;
+  fill: none;
+}
+
+
+.custom-read-more-btn:hover::after,
+.cardy:hover .custom-read-more-btn::after {
+  visibility: visible;
+  opacity: 0.7;
+  width: 90%;
+}
+
+.custom-read-more-btn:hover,
+.cardy:hover .custom-read-more-btn {
+  letter-spacing: 2px;
+  opacity: 1;
+  color: inherit;
+}
+
+.custom-read-more-btn:hover>.icon,
+.cardy:hover .custom-read-more-btn>.icon {
+  transform: translateX(30%);
+  animation: none;
+}
+
+@keyframes attention {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(30%);
+  }
+}
+
+/* Load More Button Smooth Transition */
+#load-more {
+  transition: all 0.3s ease-in-out;
 }
