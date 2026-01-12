@@ -38,7 +38,7 @@ if (scrollToTopButton) {
 
 const navButtons = document.querySelectorAll(".ul_list_navbar, .navbar-nav .styled-button-link");
 // Include all sections that should be tracked
-const sections = document.querySelectorAll("section, #home, #services, #portfolio");
+const sections = document.querySelectorAll("section, #home, #services, #portfolio, #skills");
 
 function updateActiveNav() {
     // 1. Check if we are at the bottom of the page => Activate Contact
@@ -147,6 +147,12 @@ $(document).ready(function () {
 
     // Initialize Projects Rendering
     initProjects();
+
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
 });
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saad's Portfolio</title>
 
+    <!-- Favicon stays jpg/ico usually, but ok if webp exists. Let's keep it jpg for safety or convert if script converts it. Script converts all. I will assume favicon is also converted contextually or just leave it. Favicon often needs .ico or .png. WebP support for favicon is good but let's stick to content images first. But I will lazy load content images. -->
     <link rel="shortcut icon" href="Images/fav-icon.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css?<?= time(); ?>">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,7 +36,9 @@
 
         <div class="bg-wrapper">
             <!-- <div class="container-100vh"></div> -->
-            <img src="Images/100vh-bg.gif" alt="bg" class="bg-img-100vh">
+            <!-- 100vh-bg.gif is GIF. I did NOT convert GIF in my script (extensions=.png,.jpg,.jpeg). So I MUST keep .gif -->
+            <img src="Images/100vh-bg.gif" alt="bg" class="bg-img-100vh" loading="eager">
+            <!-- Background image should be eager -->
             <div class="black-overlay"></div>
             <h1 class="main-text-100vh">
                 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=75&duration=2000&pause=2000&color=6428E3&center=true&vCenter=true&width=1200&height=300&lines=I+am+Saad+Tebba;Full-Stack+Web+Developer;Graphic+Designer;Media+Buyer"
@@ -76,6 +79,13 @@
                                 <button class="ul_list_navbar">
                                     <span class="actual-text">&nbsp;About&nbsp;</span>
                                     <span aria-hidden="true" class="hover_text_ul_list_navbar">&nbsp;About&nbsp;</span>
+                                </button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">
+                                <button class="ul_list_navbar">
+                                    <span class="actual-text">&nbsp;Skills&nbsp;</span>
+                                    <span aria-hidden="true" class="hover_text_ul_list_navbar">&nbsp;Skills&nbsp;</span>
                                 </button></a>
                         </li>
                         <li class="nav-item">
@@ -169,10 +179,149 @@
                     </div>
 
                     <div class="col align-self-end">
-                        <img src="Images/about-me-image.jpg" alt="about-me" class="rounded-3 about-me-img">
+                        <img src="Images/about-me-image.webp" alt="about-me" class="rounded-3 about-me-img"
+                            loading="lazy">
                     </div>
                 </div>
 
+            </div>
+
+        </section>
+
+        <!------                                              Skills                                              ------>
+
+        <hr class="separate-lines container" id="skills">
+        </hr>
+
+        <section class="separating-lines-padding-bottom">
+
+            <h2 class="text-center pb-2 fw-bold main-section-titles">My Skills</h2>
+            <h4 class="text-center pb-4 fw-bold lil-title-about-me">Technical Proficiency</h4>
+
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+
+                    <!-- HTML5 -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="0">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-html5 skill-icon" style="--skill-color: #E34F26;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">HTML5</p>
+                        </div>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="50">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-css3-alt skill-icon" style="--skill-color: #1572B6;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">CSS3</p>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-bootstrap skill-icon" style="--skill-color: #7952B3;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">Bootstrap</p>
+                        </div>
+                    </div>
+
+                    <!-- Tailwind -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-wind skill-icon" style="--skill-color: #38B2AC;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">Tailwind</p>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-js skill-icon" style="--skill-color: #F7DF1E;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">JavaScript</p>
+                        </div>
+                    </div>
+
+                    <!-- React -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-react skill-icon" style="--skill-color: #61DAFB;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">React JS</p>
+                        </div>
+                    </div>
+
+                    <!-- Node JS -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="0">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-node-js skill-icon" style="--skill-color: #339933;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">Node JS</p>
+                        </div>
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="50">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-php skill-icon" style="--skill-color: #777BB4;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">PHP</p>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-python skill-icon" style="--skill-color: #3776AB;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">Python</p>
+                        </div>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-solid fa-database skill-icon" style="--skill-color: #4479A1;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">MySQL</p>
+                        </div>
+                    </div>
+
+                    <!-- WordPress -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-wordpress skill-icon" style="--skill-color: #21759B;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">WordPress</p>
+                        </div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
+                        <div class="cardy skill-cardy">
+                            <div class="skill-icon-wrapper">
+                                <i class="fa-brands fa-git-alt skill-icon" style="--skill-color: #F05032;"></i>
+                            </div>
+                            <p class="skill-name mt-3 mb-0">Git/GitHub</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </section>
@@ -321,10 +470,12 @@
                         <div class="modal-body p-5">
                             <div class="row mb-4">
                                 <div class="col-6 p-0 pe-2">
-                                    <img src="" alt="" class="img-fluid w-100 modals-content-images" id="modal-img1">
+                                    <img src="" alt="" class="img-fluid w-100 modals-content-images" id="modal-img1"
+                                        loading="lazy">
                                 </div>
                                 <div class="col-6 p-0 ps-2">
-                                    <img src="" alt="" class="img-fluid w-100 modals-content-images" id="modal-img2">
+                                    <img src="" alt="" class="img-fluid w-100 modals-content-images" id="modal-img2"
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="row">
