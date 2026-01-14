@@ -18,6 +18,7 @@ const scrollToTopButton = document.getElementById("backToTopBtn");
 if (scrollToTopButton) {
     scrollToTopButton.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+        scrollToTopButton.blur();
     });
 
     window.addEventListener("scroll", () => {
