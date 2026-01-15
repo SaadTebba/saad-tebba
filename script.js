@@ -255,7 +255,7 @@ function renderProjects(projectList, container) {
         // HTML Content
         card.innerHTML = `
             <div class="img-wrapper overflow-hidden rounded mb-3">
-                <img src="${project.image1}" alt="${project.title}" class="portfolio-img w-100" style="height: 200px; object-fit: cover;">
+                <img src="${project.image1}" alt="${project.title}" class="portfolio-img w-100" style="height: 200px; object-fit: cover;" loading="lazy" decoding="async">
             </div>
             <p class="card-titles mb-2">${project.title}</p>
             <p class="card-bodies mb-3 flex-grow-1">${project.description.substring(0, 100)}...</p>
