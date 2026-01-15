@@ -186,7 +186,7 @@ if (checkbox) {
         }
     });
 
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.nav-link, .submit-button a').forEach(link => {
         link.addEventListener('click', () => {
             const navbarCollapse = document.querySelector('.navbar-collapse');
             checkbox.checked = false;
