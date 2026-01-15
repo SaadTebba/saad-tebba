@@ -170,6 +170,22 @@ if (checkbox) {
         }
     });
 
+    // Close menu when clicking outside
+    document.addEventListener('click', function (event) {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const toggleLabel = document.querySelector('label[for="checkbox"]');
+        const checkbox = document.getElementById('checkbox');
+
+        if (navbarCollapse.classList.contains('show') &&
+            !navbarCollapse.contains(event.target) &&
+            !toggleLabel.contains(event.target) &&
+            event.target !== checkbox) {
+
+            navbarCollapse.classList.remove('show');
+            checkbox.checked = false;
+        }
+    });
+
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -198,8 +214,8 @@ function initProjects() {
         const perPage = 6;
 
         // Initial render
-        const nextBatch = projects.slice(currentCount, currentCount + perPage);
-        renderProjects(nextBatch, portfolioContainer);
+        const initialBatch = projects.slice(0, perPage);
+        renderProjects(initialBatch, portfolioContainer);
         currentCount += perPage;
 
         if (currentCount >= projects.length) {
@@ -221,10 +237,14 @@ function initProjects() {
 }
 
 function renderProjects(projectList, container) {
-    projectList.forEach(project => {
+    projectList.forEach((project, index) => {
         // Create column div
         const col = document.createElement("div");
         col.className = "col-lg-4 col-md-6 col-12 cursor-pointer-portfolio mb-4"; // Reverted to col-lg-4 as per user request to display 3 items per row
+
+        // Add AOS Animation
+        col.setAttribute("data-aos", "fade-up");
+        col.setAttribute("data-aos-delay", (index % 3) * 100); // Stagger delay
 
         // Create card div
         const card = document.createElement("div");
@@ -294,22 +314,3 @@ function populateModal(project) {
     `;
 }
 
-// TODO ========================= Effects ==============================
-
-// Simple Mouse Trail Effect
-document.addEventListener("mousemove", function (e) {
-    createTrail(e.clientX, e.clientY);
-});
-
-function createTrail(x, y) {
-    const trail = document.createElement("div");
-    trail.className = "cursor-trail";
-    document.body.appendChild(trail);
-
-    trail.style.left = x + "px";
-    trail.style.top = y + "px";
-
-    setTimeout(() => {
-        trail.remove();
-    }, 500);
-}

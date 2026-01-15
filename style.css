@@ -220,11 +220,26 @@ main {
 }
 
 #mainNav.navbar-scrolled {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(10px);
+  background: transparent !important;
+  /* Moved to ::before */
+  backdrop-filter: none !important;
+  /* Moved to ::before to fix fixed-child containment */
+  -webkit-backdrop-filter: none;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+#mainNav.navbar-scrolled::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  z-index: -1;
 }
 
 
@@ -880,30 +895,6 @@ main {
 
 /* ! Animation Effects ============================================================================= */
 
-.cursor-trail {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background-color: rgba(100, 40, 227, 0.5);
-  /* Purple semi-transparent */
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  animation: fadeOut 0.5s linear forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
 
 /* Ensure modal images fit well */
 .modals-content-images {
@@ -1123,13 +1114,11 @@ main {
   /* PREVENT Navbar Padding Shrink on Mobile/Tablet */
   /* PREVENT Navbar Padding Shrink AND Visual Changes on Mobile/Tablet */
   /* PREVENT Navbar Padding Shrink AND Visual Changes on Mobile/Tablet */
+  /* PREVENT Navbar Padding Shrink AND Visual Changes on Mobile/Tablet */
   #mainNav.navbar-scrolled {
-    padding-top: 25px !important;
-    padding-bottom: 0 !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    box-shadow: none !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    /* Removed transparency/blur overrides to allow desktop style inheritance */
   }
 
   /* Right-Side Sidebar Mobile Menu Redesign */
@@ -1138,7 +1127,7 @@ main {
     top: 0;
     right: 0;
     left: auto;
-    width: 280px;
+    width: 180px;
     height: 100vh;
 
     /* Blur Effect & Colors */
@@ -1177,6 +1166,16 @@ main {
     transform: translateX(0);
   }
 
+  /* FIX: Decouple Sidebar from Header Scroll Style */
+  /* Ensure the sidebar maintains its OWN background and blur when the header is scrolled/blurred */
+  #mainNav.navbar-scrolled .navbar-collapse {
+    background-color: rgba(11, 12, 21, 0.5) !important;
+    backdrop-filter: blur(50px) !important;
+    -webkit-backdrop-filter: blur(50px) !important;
+    border-left: 1px solid rgba(127, 0, 255, 0.2) !important;
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.5) !important;
+  }
+
   .navbar-nav {
     width: 100%;
     text-align: center;
@@ -1193,6 +1192,7 @@ main {
   .ul_list_navbar,
   .navbar-nav .nav-link {
     font-size: 16px !important;
+    padding: 0 !important;
   }
 
   /* Staggered Animation */
