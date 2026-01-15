@@ -1173,12 +1173,17 @@ main {
     /* Animation States */
     transform: translateX(120%);
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
+    /* Added */
+    pointer-events: none;
+    /* Added */
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .navbar-collapse.show {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   /* FIX: Decouple Sidebar from Header Scroll Style */
