@@ -49,12 +49,13 @@
         <div class="bg-wrapper">
             <!-- <div class="container-100vh"></div> -->
             <!-- 100vh-bg.gif is GIF. I did NOT convert GIF in my script (extensions=.png,.jpg,.jpeg). So I MUST keep .gif -->
-            <img src="Images/100vh-bg.gif" alt="bg" class="bg-img-100vh" loading="eager">
+            <img src="Images/100vh-bg.gif" alt="bg" class="bg-img-100vh" loading="eager" fetchpriority="high">
             <!-- Background image should be eager -->
             <div class="black-overlay"></div>
             <h1 class="main-text-100vh">
                 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=75&duration=2000&pause=2000&color=6428E3&center=true&vCenter=true&width=1200&height=300&lines=I+am+Saad+Tebba;Full-Stack+Web+Developer;Graphic+Designer;Media+Buyer"
-                    alt="Saad Tebba - Full-Stack Web Developer, Graphic Designer, and Media Buyer">
+                    alt="Saad Tebba - Full-Stack Web Developer, Graphic Designer, and Media Buyer" loading="eager"
+                    fetchpriority="high">
             </h1>
 
         </div>
@@ -200,7 +201,7 @@
                     <div
                         class="col-lg-6 col-12 d-flex align-items-center justify-content-center justify-content-lg-end about-img-container">
                         <img src="Images/about-me-image.webp" alt="Saad Tebba Portrait" class="rounded-3 about-me-img"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -492,11 +493,11 @@
                             <div class="row mb-4">
                                 <div class="col-6 p-0 pe-2">
                                     <img src="" alt="" class="img-fluid w-100 modals-content-images" id="modal-img1"
-                                        loading="lazy">
+                                        loading="lazy" decoding="async">
                                 </div>
                                 <div class="col-6 p-0 ps-2">
                                     <img src="" alt="" class="img-fluid w-100 modals-content-images" id="modal-img2"
-                                        loading="lazy">
+                                        loading="lazy" decoding="async">
                                 </div>
                             </div>
                             <div class="row">
