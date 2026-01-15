@@ -146,8 +146,7 @@ $(document).ready(function () {
         }
     });
 
-    // Initialize Projects Rendering
-    initProjects();
+    // Projects initialized in projects.js
 
     // Initialize AOS
     AOS.init({
@@ -196,121 +195,5 @@ if (checkbox) {
 }
 
 
-// TODO ========================= Dynamic Projects Rendering ==============================
-
-function initProjects() {
-    // Check if we are on index.html or portfolio.html
-    const indexContainer = document.getElementById("portfolio-countr");
-    const portfolioContainer = document.getElementById("portfolio-container-all");
-    const loadMoreBtn = document.getElementById("load-more-btn");
-
-    if (indexContainer) {
-        // Render first 3 projects as requested
-        renderProjects(projects.slice(0, 3), indexContainer);
-    }
-
-    if (portfolioContainer) {
-        let currentCount = 0;
-        const perPage = 6;
-
-        // Initial render
-        const initialBatch = projects.slice(0, perPage);
-        renderProjects(initialBatch, portfolioContainer);
-        currentCount += perPage;
-
-        if (currentCount >= projects.length) {
-            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-        }
-
-        if (loadMoreBtn) {
-            loadMoreBtn.addEventListener('click', () => {
-                const nextBatch = projects.slice(currentCount, currentCount + perPage);
-                renderProjects(nextBatch, portfolioContainer);
-                currentCount += perPage;
-
-                if (currentCount >= projects.length) {
-                    loadMoreBtn.style.display = 'none';
-                }
-            });
-        }
-    }
-}
-
-function renderProjects(projectList, container) {
-    projectList.forEach((project, index) => {
-        // Create column div
-        const col = document.createElement("div");
-        col.className = "col-lg-4 col-md-6 col-12 cursor-pointer-portfolio mb-4"; // Reverted to col-lg-4 as per user request to display 3 items per row
-
-        // Add AOS Animation
-        col.setAttribute("data-aos", "fade-up");
-        col.setAttribute("data-aos-delay", (index % 3) * 100); // Stagger delay
-
-        // Create card div
-        const card = document.createElement("div");
-        card.className = "cardy h-100 d-flex flex-column";
-        card.setAttribute("data-bs-toggle", "modal");
-        card.setAttribute("data-bs-target", "#project-modal");
-
-        // HTML Content
-        card.innerHTML = `
-            <div class="img-wrapper overflow-hidden rounded mb-3">
-                <img src="${project.image1}" alt="${project.title}" class="portfolio-img w-100" style="height: 200px; object-fit: cover;" loading="lazy" decoding="async">
-            </div>
-            <p class="card-titles mb-2">${project.title}</p>
-            <p class="card-bodies mb-3 flex-grow-1">${project.description.substring(0, 100)}...</p>
-            <div class="mt-auto">
-                 <button class="custom-read-more-btn">
-                  Read More 
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
-                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#6428E3" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
-                  </svg>
-                </button>
-            </div>
-        `;
-
-        // Add Click Event to Populate Modal
-        card.addEventListener("click", () => populateModal(project));
-
-        col.appendChild(card);
-        container.appendChild(col);
-    });
-}
-
-function populateModal(project) {
-    document.getElementById("modal-title").innerText = project.title;
-    document.getElementById("modal-img1").src = project.image1;
-    document.getElementById("modal-img2").src = project.image2;
-    document.getElementById("modal-overview").innerText = project.overview;
-    document.getElementById("modal-description").innerText = project.description;
-
-    // Tech Stack
-    const techList = document.getElementById("modal-tech-list");
-    techList.innerHTML = "";
-    project.tech.forEach(tech => {
-        const li = document.createElement("li");
-        li.innerText = tech;
-        techList.appendChild(li);
-    });
-
-    // Features (assuming features is an array, if string handle accordingly)
-    const featuresEl = document.getElementById("modal-features");
-    if (Array.isArray(project.features)) {
-        featuresEl.innerHTML = project.features.map(f => `<br>• ${f}`).join("");
-    } else {
-        featuresEl.innerText = project.features;
-    }
-
-    document.getElementById("modal-process").innerText = project.process;
-    document.getElementById("modal-impact").innerText = project.impact;
-
-    // Details List (Role, Date, etc.)
-    const detailsList = document.getElementById("modal-details-list");
-    detailsList.innerHTML = `
-        <li>👤 Role — ${project.role}</li>
-        <li>🗓️ Date & Timeline — ${project.date}</li>
-        <li>🎯 Sector — ${project.sector}</li>
-        <li>👥 Team Size — ${project.team}</li>
-    `;
-}
+// Logic moved to projects.js to avoid duplication
 

@@ -17,21 +17,21 @@ const projects = [
         impact: "Increased engagement and lead capture through simplified, attractive landing experiences."
     },
     {
-        id: "abrakadabra",
-        title: "Abrakadabra – Kindergarten",
-        category: "Education / Preschool",
-        image1: "Images/Portfolio/abrakadabra1.webp",
-        image2: "Images/Portfolio/abrakadabra2.webp",
-        description: "Redesigned the kindergarten’s online presence to improve clarity, layout, and branding.",
+        id: "chickendelight",
+        title: "Chicken Delight – Restaurant Website",
+        category: "Restaurant / Hospitality",
+        image1: "Images/Portfolio/chicken-delight1.webp",
+        image2: "Images/Portfolio/chicken-delight2.webp",
+        description: "Redesigned the Chicken Delight websites to modernize their online presence, improve usability, and create a responsive, engaging experience for customers.",
         role: "Web Designer & Front‑End Developer",
-        date: "September 2025 · 3 weeks",
-        sector: "Education / Preschool",
+        date: "January 2026 · 3 weeks",
+        sector: "Restaurant / Hospitality",
         team: "1 member",
-        overview: "Redesigned the kindergarten’s online presence to improve clarity, layout, and branding. The focus was on creating a friendly, readable, and accessible one‑page layout that reflects a child‑centric institution.",
-        tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
-        features: ["Clean, responsive layout for all devices", "Updated visual hierarchy and typography", "Smooth interactions and navigation"],
-        process: "Focused on creating a child-friendly and accessible design while ensuring information is easy to find for parents.",
-        impact: "Improved user experience and presentation for parents and visitors by making key information easily accessible."
+        overview: "Redesigned the Chicken Delight websites to modernize their online presence, improve usability, and create a responsive, engaging experience for customers. Converted a static HTML design into a custom WordPress theme, integrating WooCommerce and custom plugins to streamline ordering and content management.",
+        tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind", "WordPress", "WooCommerce"],
+        features: ["Fully responsive design for desktop and mobile", "Modern layout with clear menu and ordering flow", "Custom WordPress theme with integrated WooCommerce", "Smooth navigation and interactive elements"],
+        process: "Focused on translating a static HTML design into a functional WordPress site while maintaining fast load times, clean code, and easy content management for the client. Implemented custom plugins to enhance functionality and user experience.",
+        impact: "Enhanced online visibility, improved customer experience, and simplified backend management for the restaurant. Visitors can easily view menus, place orders, and navigate the site on any device."
     },
     {
         id: "rentalx",
@@ -49,6 +49,23 @@ const projects = [
         features: ["Property listing modules", "Search and filtering", "Admin content control"],
         process: "Developed a custom property management solution and integrated it into a user-friendly WordPress theme.",
         impact: "Improved client’s ability to manage properties and user discovery experience."
+    },
+    {
+        id: "abrakadabra",
+        title: "Abrakadabra – Kindergarten",
+        category: "Education / Preschool",
+        image1: "Images/Portfolio/abrakadabra1.webp",
+        image2: "Images/Portfolio/abrakadabra2.webp",
+        description: "Redesigned the kindergarten’s online presence to improve clarity, layout, and branding.",
+        role: "Web Designer & Front‑End Developer",
+        date: "September 2025 · 3 weeks",
+        sector: "Education / Preschool",
+        team: "1 member",
+        overview: "Redesigned the kindergarten’s online presence to improve clarity, layout, and branding. The focus was on creating a friendly, readable, and accessible one‑page layout that reflects a child‑centric institution.",
+        tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
+        features: ["Clean, responsive layout for all devices", "Updated visual hierarchy and typography", "Smooth interactions and navigation"],
+        process: "Focused on creating a child-friendly and accessible design while ensuring information is easy to find for parents.",
+        impact: "Improved user experience and presentation for parents and visitors by making key information easily accessible."
     },
     {
         id: "techcare",
@@ -391,3 +408,140 @@ const projects = [
         impact: "Gained hands-on e-commerce experience. Created consistent online identity."
     }
 ];
+
+// TODO ========================= Dynamic Projects Rendering ==============================
+
+function initProjects() {
+    // Check if we are on index.html or portfolio.html
+    const indexContainer = document.getElementById("portfolio-countr");
+    const portfolioContainer = document.getElementById("portfolio-container-all");
+    const loadMoreBtn = document.getElementById("load-more-btn");
+
+    if (indexContainer) {
+        // Render first 3 projects as requested
+        renderProjects(projects.slice(0, 3), indexContainer);
+    }
+
+    if (portfolioContainer) {
+        let currentCount = 0;
+        const perPage = 6;
+
+        // Initial render
+        const initialBatch = projects.slice(0, perPage);
+        renderProjects(initialBatch, portfolioContainer);
+        currentCount += perPage;
+
+        if (currentCount >= projects.length) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+        }
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                const nextBatch = projects.slice(currentCount, currentCount + perPage);
+                renderProjects(nextBatch, portfolioContainer);
+                currentCount += perPage;
+
+                if (currentCount >= projects.length) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            });
+        }
+    }
+}
+
+function renderProjects(projectList, container) {
+    projectList.forEach((project, index) => {
+        // Create column div
+        const col = document.createElement("div");
+        col.className = "col-lg-4 col-md-6 col-12 cursor-pointer-portfolio mb-4"; // Reverted to col-lg-4 as per user request to display 3 items per row
+
+        // Add AOS Animation
+        col.setAttribute("data-aos", "fade-up");
+        col.setAttribute("data-aos-delay", (index % 3) * 100); // Stagger delay
+
+        // Create card div
+        const card = document.createElement("div");
+        card.className = "cardy h-100 d-flex flex-column";
+        card.setAttribute("data-bs-toggle", "modal");
+        card.setAttribute("data-bs-target", "#project-modal");
+
+        // HTML Content
+        card.innerHTML = `
+            <div class="img-wrapper overflow-hidden rounded mb-3">
+                <img src="${project.image1}" alt="${project.title}" class="portfolio-img w-100" style="height: 200px; object-fit: cover;" loading="lazy" decoding="async">
+            </div>
+            <p class="card-titles mb-2">${project.title}</p>
+            <p class="card-bodies mb-3 flex-grow-1">${project.description.substring(0, 100)}...</p>
+            <div class="mt-auto">
+                 <button class="custom-read-more-btn">
+                  Read More 
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#6428E3" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
+                  </svg>
+                </button>
+            </div>
+        `;
+
+        // Add Click Event to Populate Modal
+        card.addEventListener("click", () => populateModal(project));
+
+        col.appendChild(card);
+        container.appendChild(col);
+    });
+}
+
+function populateModal(project) {
+    const modalTitle = document.getElementById("modal-title");
+    const modalImg1 = document.getElementById("modal-img1");
+    const modalImg2 = document.getElementById("modal-img2");
+    const modalOverview = document.getElementById("modal-overview");
+    const modalDescription = document.getElementById("modal-description");
+    const featuresEl = document.getElementById("modal-features");
+    const modalProcess = document.getElementById("modal-process");
+    const modalImpact = document.getElementById("modal-impact");
+    const detailsList = document.getElementById("modal-details-list");
+    const techList = document.getElementById("modal-tech-list");
+
+    if (modalTitle) modalTitle.innerText = project.title;
+    if (modalImg1) modalImg1.src = project.image1;
+    if (modalImg2) modalImg2.src = project.image2;
+    if (modalOverview) modalOverview.innerText = project.overview;
+    if (modalDescription) modalDescription.innerText = project.description;
+
+    // Tech Stack
+    if (techList) {
+        techList.innerHTML = "";
+        project.tech.forEach(tech => {
+            const li = document.createElement("li");
+            li.innerText = tech;
+            techList.appendChild(li);
+        });
+    }
+
+    // Features
+    if (featuresEl) {
+        if (Array.isArray(project.features)) {
+            featuresEl.innerHTML = project.features.map(f => `<br>• ${f}`).join("");
+        } else {
+            featuresEl.innerText = project.features;
+        }
+    }
+
+    if (modalProcess) modalProcess.innerText = project.process;
+    if (modalImpact) modalImpact.innerText = project.impact;
+
+    // Details List (Role, Date, etc.)
+    if (detailsList) {
+        detailsList.innerHTML = `
+            <li>👤 Role — ${project.role}</li>
+            <li>🗓️ Date & Timeline — ${project.date}</li>
+            <li>🎯 Sector — ${project.sector}</li>
+            <li>👥 Team Size — ${project.team}</li>
+        `;
+    }
+}
+
+// Initialize on load
+$(document).ready(function () {
+    initProjects();
+});
