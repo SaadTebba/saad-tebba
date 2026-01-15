@@ -249,14 +249,25 @@ main {
 /** :::::::::: Left Side - My info :::::::::: **/
 
 
-.my-info-span {
+/* .my-info-span {
   position: absolute;
   left: 30%;
-}
+} */
 
 .about-us-content {
   padding: 20px;
   border-radius: 0.5rem;
+  /* display: flex;  Inherited from HTML class but good to reinforce or keep clean */
+}
+
+.about-label {
+  width: 35%;
+  min-width: 120px;
+}
+
+.about-value {
+  font-weight: 400;
+  /* color: ... inherit or specific if needed */
 }
 
 
@@ -1088,10 +1099,10 @@ main {
     flex-direction: column;
   }
 
-  .my-info-span {
+  /* .my-info-span {
     position: absolute;
     left: 40%;
-  }
+  } */
 
   .about-me-img {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -1309,7 +1320,7 @@ main {
   }
 
   .contact_form_area {
-    width: 80%;
+    width: 100%;
   }
 
   /* FIX: Align Services/Portfolio exactly like Skills on mobile */
@@ -1321,14 +1332,18 @@ main {
     margin-left: calc(-.5 * var(--bs-gutter-x)) !important;
   }
 
+  .cards-container>div {
+    padding: 0 !important;
+  }
+
   #about .row {
     flex-direction: column;
   }
 
-  .my-info-span {
+  /* .my-info-span {
     position: absolute;
     left: 40%;
-  }
+  } */
 
   .about-me-img {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
