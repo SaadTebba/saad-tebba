@@ -205,8 +205,8 @@ function initProjects() {
     const loadMoreBtn = document.getElementById("load-more-btn");
 
     if (indexContainer) {
-        // Render first 6 projects
-        renderProjects(projects.slice(0, 6), indexContainer);
+        // Render first 3 projects as requested
+        renderProjects(projects.slice(0, 3), indexContainer);
     }
 
     if (portfolioContainer) {

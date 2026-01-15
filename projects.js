@@ -255,23 +255,6 @@ const projects = [
         impact: "Improved lead capture and service visibility."
     },
     {
-        id: "electrohouse",
-        title: "Electro House – E‑Commerce",
-        category: "E‑Commerce",
-        image1: "Images/Portfolio/Sony Headphones 1.webp",
-        image2: "Images/Portfolio/Sony Headphones 1.webp",
-        description: "E‑commerce store for Swedish tech accessories, later converted to WordPress + WooCommerce with payment and product management plugins.",
-        role: "Full Stack Developer",
-        date: "October 2025 · 2 months",
-        sector: "E‑Commerce",
-        team: "1 member",
-        overview: "E‑commerce store for Swedish tech accessories, later converted to WordPress + WooCommerce with payment and product management plugins.",
-        tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind", "WordPress", "WooCommerce"],
-        features: ["Product catalog", "Checkout system", "Admin product management"],
-        process: "Built a scalable e-commerce platform with a focus on user experience and easy administration.",
-        impact: "Enabled online sales with a fully functional store and CMS backend."
-    },
-    {
         id: "elite",
         title: "Elite Taekwondo & Fitness – Club",
         category: "Fitness / Sports",
