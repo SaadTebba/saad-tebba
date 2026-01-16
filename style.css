@@ -799,7 +799,7 @@ main {
 .contact_form_area {
   width: 60%;
   display: flex;
-  justify-self: center;
+  margin: 0 auto;
 }
 
 .submit-button {
