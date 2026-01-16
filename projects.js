@@ -520,8 +520,13 @@ function populateModal(project) {
 
     // Features
     if (featuresEl) {
+        featuresEl.innerHTML = "";
         if (Array.isArray(project.features)) {
-            featuresEl.innerHTML = project.features.map(f => `${f}`).join("");
+            project.features.forEach(feature => {
+                const li = document.createElement("li");
+                li.innerText = feature;
+                featuresEl.appendChild(li);
+            });
         } else {
             featuresEl.innerText = project.features;
         }
