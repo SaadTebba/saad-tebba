@@ -521,7 +521,7 @@ function populateModal(project) {
     // Features
     if (featuresEl) {
         if (Array.isArray(project.features)) {
-            featuresEl.innerHTML = project.features.map(f => `<br>• ${f}`).join("");
+            featuresEl.innerHTML = project.features.map(f => `${f}`).join("");
         } else {
             featuresEl.innerText = project.features;
         }

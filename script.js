@@ -193,7 +193,3 @@ if (checkbox) {
         });
     });
 }
-
-
-// Logic moved to projects.js to avoid duplication
-
