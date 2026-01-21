@@ -422,12 +422,7 @@ main {
   transition: transform 0.5s ease-in-out;
 }
 
-.project-details-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-}
+
 
 .project-details-min-titles {
   font-size: 1.2rem;
