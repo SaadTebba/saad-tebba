@@ -80,6 +80,22 @@ const projects = [
         impact: "Streamlined clinic operations, reduced scheduling errors, and enhanced data management for healthcare staff."
     },
     {
+        id: "aurum",
+        title: "Aurum – Plumber Website",
+        category: "Services / Small Business",
+        image1: "Images/Portfolio/aurum1.webp",
+        image2: "Images/Portfolio/aurum2.webp",
+        description: "Developed a professional, responsive website for a plumbing service, focusing on usability and lead generation.",
+        role: "Web Designer & Developer",
+        date: "January 2026 · 2 weeks",
+        sector: "Plumbing / Services",
+        overview: "Built a fully responsive website for a plumbing service to provide a clean, easy-to-navigate experience. Focused on clear information hierarchy, intuitive navigation, and accessible contact forms to help visitors quickly get in touch.",
+        tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
+        features: ["Responsive design for all devices", "Lead capture via contact forms", "Clean layout with service highlights", "Optimized performance and fast load times"],
+        process: "Worked closely with the client to map out key services and contact points, then designed and developed a website that is simple, professional, and effective at converting visitors into leads.",
+        impact: "Enhanced the client’s online presence, improved user experience, and made contacting the plumbing service straightforward for potential customers."
+    },
+    {
         id: "globewide",
         title: "GlobeWide – Travel / Services",
         category: "Travel / Services",
