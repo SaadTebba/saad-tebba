@@ -11,7 +11,7 @@ const projects = [
         sector: "Coffee / Service",
         overview: "Developed two high‑impact landing pages for a specialty coffee brand, one for the overall brand presence, and one focused on a key service offering. The goal was to showcase the brand’s identity, attract new customers, and increase engagement. I crafted clean, visually appealing layouts with clear calls-to-action, ensuring visitors could easily understand the brand story and take action. The pages were fully responsive, fast-loading, and optimized for desktop and mobile audiences.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
-        features: ["Clean conversion‑focused layouts", "Integrated with Mailerlite forms", "Fast load and responsive design"],
+        features: ["Conversion-focused layouts with attention to visual hierarchy", "Fully responsive and mobile-friendly design", "Clear, compelling messaging and call-to-actions", "Optimized for fast load times and smooth interactions"],
         process: "Collaborated directly with the client to understand brand positioning and target audience. Designed wireframes, implemented modern front-end techniques, and iterated based on feedback to ensure both aesthetic appeal and usability.",
         impact: "The landing pages provided a professional online presence, increased user engagement, and clearly communicated the brand’s story. They were designed to capture leads and encourage repeat visits, giving the client a tangible tool to grow their online visibility."
     },
