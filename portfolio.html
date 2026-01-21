@@ -1,23 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
+    <!------                       Title                     ------>
+
+    <title>Saad Tebba | Full-Stack Web Developer Portfolio</title>
+
+    <!------                       Meta Tags                     ------>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saad-tebba.online/">
+    <meta property="og:title" content="Saad Tebba | Full-Stack Web Developer Portfolio">
+    <meta property="og:description"
+        content="Portfolio of Saad Tebba, a Full-Stack Web Developer, Graphic Designer, and Media Buyer based in Morocco. Explore my projects, skills, and services.">
+    <meta property="og:image" content="Images/about-me-image.webp">
+    <meta name="robots" content="index, follow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects | Saad Tebba Portfolio</title>
+
     <meta name="description"
-        content="Explore the full portfolio of my projects including web development, graphic design, and marketing campaigns.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://saadtebba.com/portfolio.html">
+        content="Portfolio of Saad Tebba, a Full-Stack Web Developer, Graphic Designer, and Media Buyer based in Morocco. Explore my projects, skills, and services.">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saadtebba.com/portfolio.html">
-    <meta property="og:title" content="All Projects | Saad Tebba Portfolio">
-    <meta property="og:description"
-        content="Explore the full portfolio of my projects including web development, graphic design, and marketing campaigns.">
-    <meta property="og:image" content="Images/about-me-image.webp">
+    <!------                       Link Tags                     ------>
 
+    <link rel="canonical" href="https://saad-tebba.online/">
     <link rel="shortcut icon" href="Images/fav-icon.webp" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
@@ -25,27 +33,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css?v=1.1">
+
 </head>
 
 <body>
 
-    <!------                       Navbar & 100vh                     ------>
-
+    <!------                       100vh Area                     ------>
 
     <header id="home">
 
-        <!------    Navbar    ------>
+        <!------                     Navbar                     ------>
 
-        <!-- Added 'scrolled' class manually or rely on JS? 
-             Since background image is gone, navbar might need background color immediately.
-             But let's stick to structure first. -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled" id="mainNav">
             <div class="container px-5">
                 <a class="navbar-brand" id="myName" href="index.html">Saad Tebba</a>
 
-                <!------    Breadcrumbs    ------>
+                <!------                     Hamburger menu                     ------>
 
-                <div class="breadcrumbs">
+                <div class="hamburger">
                     <input type="checkbox" id="checkbox">
                     <label for="checkbox" class="toggle">
                         <div class="bars" id="bar1"></div>
@@ -53,6 +58,7 @@
                         <div class="bars" id="bar3"></div>
                     </label>
                 </div>
+
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav mx-lg-auto">
                         <li class="nav-item">
@@ -114,10 +120,13 @@
     </header>
 
     <main>
+
         <h1
             style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;">
             Saad Tebba - Portfolio & Projects</h1>
+
         <section>
+
             <h2 class="text-center pb-3 fw-bold main-section-titles">Full Portfolio</h2>
             <h4 class="text-center pb-4 fw-bold lil-title-about-me">All My Work</h4>
 
@@ -130,7 +139,7 @@
 
             <div class="row justify-content-center mt-4 mb-5">
                 <div class="col-auto">
-                    <center class="submit-button">
+                    <div class="submit-button">
                         <a id="load-more-btn" class="cursor-pointer-portfolio">
                             <span></span>
                             <span></span>
@@ -138,11 +147,10 @@
                             <span></span>
                             Load More
                         </a>
-                    </center>
+                    </div>
                 </div>
             </div>
 
-            <!-- Generic Modal (Copy from index.html) -->
             <div class="modal fade main-modal-div modal-body-main" id="project-modal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog portfolio-popups my-0">
                     <div class="modal-content">
@@ -166,7 +174,7 @@
                                 <p id="modal-details-list" style="list-style: none;"></p>
 
                                 <h5 class="project-details-min-titles">Project Overview</h5>
-                                <p id="modal-description"></p>
+                                <p id="modal-overview"></p>
 
                                 <h5 class="project-details-min-titles">Technologies & Tools</h5>
                                 <p id="modal-tech-list" style="list-style: none;"></p>
@@ -187,26 +195,17 @@
 
         </section>
 
-        </section>
-
-
-
         <!--                                              Contact                                              -->
-
 
         <hr class="separate-lines container" id="contact">
         </hr>
 
-
         <footer class="container">
-
 
             <h2 class="text-center pb-3 fw-bold main-section-titles">Get in touch with me</h2>
             <h4 class="text-center pb-4 fw-bold lil-title-about-me">Fast delivery & Fair prices</h4>
 
-
             <div class="row justify-content-center contact_form_area">
-
                 <div class="contact-form">
                     <form class="px-4 pt-3 pb-2">
                         <div class="input-box">
@@ -225,7 +224,7 @@
                             <input type="text" name="" id="message" required>
                             <label>Message</label>
                         </div>
-                        <center class="submit-button">
+                        <div class="submit-button">
                             <a onclick="sendMail()" class="cursor-pointer-portfolio">
                                 <span></span>
                                 <span></span>
@@ -233,16 +232,14 @@
                                 <span></span>
                                 Submit
                             </a>
-                        </center>
+                        </div>
                     </form>
                 </div>
-
 
             </div>
 
             <div class="row justify-content-center">
                 <div class="social-buttons social-buttons-login-box">
-
 
                     <a href="https://github.com/SaadTebba" target="_blank" class="social-button github">
                         <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19">
@@ -251,6 +248,7 @@
                             </path>
                         </svg>
                     </a>
+
                     <a href="https://www.linkedin.com/in/saad-tebba-9b1b90298/" target="_blank"
                         class="social-button linkedin">
                         <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -265,6 +263,7 @@
                             </g>
                         </svg>
                     </a>
+
                     <a href="https://web.facebook.com/profile.php?id=100083027896967" target="_blank"
                         class="social-button facebook">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -277,6 +276,7 @@
                             </g>
                         </svg>
                     </a>
+
                     <a href="https://www.instagram.com/saad.tebba" target="_blank" class="social-button instagram">
                         <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -314,6 +314,7 @@
                                 d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
                         </svg>
                     </a>
+
                 </div>
             </div>
 
@@ -322,14 +323,6 @@
         </footer>
 
     </main>
-
-    <footer>
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#212121" fill-opacity="1"
-                d="M0,288L18.5,272C36.9,256,74,224,111,218.7C147.7,213,185,235,222,250.7C258.5,267,295,277,332,240C369.2,203,406,117,443,96C480,75,517,117,554,149.3C590.8,181,628,203,665,213.3C701.5,224,738,224,775,229.3C812.3,235,849,245,886,234.7C923.1,224,960,192,997,197.3C1033.8,203,1071,245,1108,234.7C1144.6,224,1182,160,1218,144C1255.4,128,1292,160,1329,154.7C1366.2,149,1403,107,1422,85.3L1440,64L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z">
-            </path>
-        </svg> -->
-    </footer>
 
     <button class="button-back-to-top" id="backToTopBtn">
         <svg class="svgIcon" viewBox="0 0 384 512">
@@ -342,13 +335,29 @@
         </svg>
     </button>
 
+    <!--                                                Scripts                                                -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js" defer></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/165265fe22.js" crossorigin="anonymous" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
         defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MGP6JQRF6"></script>
     <script src="projects.js" defer></script>
     <script src="script.js" defer></script>
+
+    <!------                       Google Analytics                     ------>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7MGP6JQRF6');
+    </script>
 
 </body>
 

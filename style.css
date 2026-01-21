@@ -86,9 +86,9 @@ main {
 }
 
 
-/** :::::::::: Breadcrumbs Menu :::::::::: **/
+/** :::::::::: hamburger Menu :::::::::: **/
 
-.breadcrumbs {
+.hamburger {
   display: none;
 }
 
@@ -1118,8 +1118,8 @@ main {
     width: 100%;
   }
 
-  /* Ensure breadcrumbs/hamburger is visible on tablet/mobile */
-  .breadcrumbs {
+  /* Ensure hamburger/hamburger is visible on tablet/mobile */
+  .hamburger {
     display: block;
     position: relative;
     z-index: 1100;
@@ -1314,7 +1314,7 @@ main {
     object-fit: cover;
   }
 
-  .breadcrumbs {
+  .hamburger {
     display: block;
   }
 
@@ -1365,7 +1365,7 @@ main {
 
 
 
-  .breadcrumbs {
+  .hamburger {
     display: block;
   }
 

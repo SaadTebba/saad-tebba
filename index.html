@@ -1,24 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saad Tebba | Full-Stack Web Developer & Designer Portfolio</title>
-    <meta name="description"
-        content="Portfolio of Saad Tebba, a Full-Stack Web Developer, Graphic Designer, and Media Buyer based in Morocco. Explore my projects, skills, and services.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://saadtebba.com/">
 
-    <!-- Open Graph / Facebook -->
+    <!------                       Title                     ------>
+
+    <title>Saad Tebba | Full-Stack Web Developer Portfolio</title>
+
+    <!------                       Meta Tags                     ------>
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saadtebba.com/">
-    <meta property="og:title" content="Saad Tebba | Full-Stack Web Developer & Designer Portfolio">
+    <meta property="og:url" content="https://saad-tebba.online/">
+    <meta property="og:title" content="Saad Tebba | Full-Stack Web Developer Portfolio">
     <meta property="og:description"
         content="Portfolio of Saad Tebba, a Full-Stack Web Developer, Graphic Designer, and Media Buyer based in Morocco. Explore my projects, skills, and services.">
     <meta property="og:image" content="Images/about-me-image.webp">
+    <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon stays jpg/ico usually, but ok if webp exists. Let's keep it jpg for safety or convert if script converts it. Script converts all. I will assume favicon is also converted contextually or just leave it. Favicon often needs .ico or .png. WebP support for favicon is good but let's stick to content images first. But I will lazy load content images. -->
+    <meta name="description"
+        content="Portfolio of Saad Tebba, a Full-Stack Web Developer, Graphic Designer, and Media Buyer based in Morocco. Explore my projects, skills, and services.">
+
+    <!------                       Link Tags                     ------>
+
+    <link rel="canonical" href="https://saad-tebba.online/">
     <link rel="shortcut icon" href="Images/fav-icon.webp" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
@@ -26,26 +33,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css?v=1.1">
+
 </head>
-
-
-
 
 <body>
 
-
-    <!------                       Navbar & 100vh                     ------>
-
+    <!------                       100vh Area                     ------>
 
     <header id="home">
 
-        <!------    Background image and overlay    ------>
+        <!------                       Background image and overlay                       ------>
 
         <div class="bg-wrapper">
-            <!-- <div class="container-100vh"></div> -->
-            <!-- 100vh-bg.gif is GIF. I did NOT convert GIF in my script (extensions=.png,.jpg,.jpeg). So I MUST keep .gif -->
             <img src="Images/100vh-bg.gif" alt="bg" class="bg-img-100vh" loading="eager">
-            <!-- Background image should be eager -->
             <div class="black-overlay"></div>
             <h1 class="main-text-100vh">
                 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=75&duration=2000&pause=2000&color=6428E3&center=true&vCenter=true&width=1200&height=300&lines=I+am+Saad+Tebba;Full-Stack+Web+Developer;Graphic+Designer;Media+Buyer"
@@ -55,16 +55,16 @@
 
         </div>
 
-        <!------    Navbar    ------>
+        <!------                       Navbar                     ------>
 
         <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
 
             <div class="container px-5">
                 <a class="navbar-brand" id="myName" href="#home">Saad Tebba</a>
 
-                <!------    Breadcrumbs    ------>
+                <!------                       Hamburger menu                     ------>
 
-                <div class="breadcrumbs">
+                <div class="hamburger">
 
                     <input type="checkbox" id="checkbox">
                     <label for="checkbox" class="toggle">
@@ -129,29 +129,20 @@
             </div>
 
 
-
-
         </nav>
 
     </header>
 
 
 
-
     <main>
 
-
-
-
         <!------                                              About My Self                                            ------>
-
-
 
         <section class="pt-5 separating-lines-padding-bottom" id="about" data-aos="fade-up">
 
             <h2 class="text-center pb-2 fw-bold main-section-titles-aboutmyself">About myself</h2>
             <h4 class="text-center pb-4 fw-bold lil-title-about-me">Who am I</h4>
-
 
             <div class="container">
 
@@ -213,9 +204,9 @@
             <h4 class="text-center pb-4 fw-bold lil-title-about-me">Technical Proficiency</h4>
 
             <div class="container">
+
                 <div class="row g-4 justify-content-center">
 
-                    <!-- HTML5 -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="0">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -225,7 +216,6 @@
                         </div>
                     </div>
 
-                    <!-- CSS3 -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="50">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -235,7 +225,6 @@
                         </div>
                     </div>
 
-                    <!-- Bootstrap -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -245,7 +234,6 @@
                         </div>
                     </div>
 
-                    <!-- Tailwind -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -255,7 +243,6 @@
                         </div>
                     </div>
 
-                    <!-- JavaScript -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -265,7 +252,6 @@
                         </div>
                     </div>
 
-                    <!-- React -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -275,7 +261,6 @@
                         </div>
                     </div>
 
-                    <!-- Node JS -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="0">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -285,7 +270,6 @@
                         </div>
                     </div>
 
-                    <!-- PHP -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="50">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -295,7 +279,6 @@
                         </div>
                     </div>
 
-                    <!-- Python -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -305,7 +288,6 @@
                         </div>
                     </div>
 
-                    <!-- MySQL -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -315,7 +297,6 @@
                         </div>
                     </div>
 
-                    <!-- WordPress -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -325,7 +306,6 @@
                         </div>
                     </div>
 
-                    <!-- Git -->
                     <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
                         <div class="cardy skill-cardy">
                             <div class="skill-icon-wrapper">
@@ -336,116 +316,70 @@
                     </div>
 
                 </div>
+
             </div>
 
         </section>
 
-
-
         <!------                                              Services                                            ------>
-
-
 
         <hr class="separate-lines container" id="services">
         </hr>
 
-
         <section>
-
 
             <h2 class="text-center pb-3 fw-bold main-section-titles">Services & Expertise</h2>
             <h4 class="text-center pb-4 fw-bold lil-title-about-me">My Services</h4>
 
-
             <div class="container">
+
                 <div
                     class="row cards-container justify-content-center py-3 media-queries-paddings separating-lines-padding-bottom">
+
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
                         <div class="cardy services-cardy h-100">
-                            <p class="card-titles"><i class="fas fa-code pe-3 services-icons"></i>Front-End Development
+                            <p class="card-titles"><i class="fas fa-code pe-3 services-icons"></i>Web Development
                             </p>
-                            <p class="card-bodies">I create fast, responsive, and visually engaging websites that work
-                                flawlessly on all devices. My front-end work ensures smooth navigation, clear structure,
-                                and
-                                a professional look that helps businesses stand out online.
+                            <p class="card-bodies">I design and build fast, modern, and responsive websites for local
+                                and service businesses. Clear structure, strong visuals, and smooth navigation focused
+                                on turning visitors into inquiries.
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        <div class="cardy services-cardy h-100">
-                            <p class="card-titles"><i class="fas fa-database pe-3 services-icons"></i>Back-End
-                                Development
-                            </p>
-                            <p class="card-bodies">I build secure and reliable back-end systems that power websites and
-                                apps. My work ensures smooth operations, custom functionality, and efficient data
-                                management
-                                to support your business.
-                            </p>
-                        </div>
-                    </div>
+
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
                         <div class="cardy services-cardy h-100">
                             <p class="card-titles"><i
-                                    class="fa-brands fa-wordpress-simple pe-3 services-icons"></i>WordPress Development
+                                    class="fa-brands fa-wordpress-simple pe-3 services-icons"></i>WordPress Websites
                             </p>
-                            <p class="card-bodies">I design and develop fully customized WordPress websites, offering
-                                simple
-                                management and full flexibility. Whether for a business site, blog, or online store, I
-                                create scalable solutions tailored to your goals.
+                            <p class="card-bodies">Fully custom-coded WordPress websites without page builders. Easy to
+                                manage, scalable, and built for long-term use, whether it’s a business site, blog, or
+                                content-driven platform.
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
                         <div class="cardy services-cardy h-100">
-                            <p class="card-titles"><i class="fas fa-palette pe-3 services-icons"></i>Graphic & Visual
-                                Design
+                            <p class="card-titles"><i class="fa-solid fa-layer-group pe-3 services-icons"></i>Advanced
+                                Features
                             </p>
-                            <p class="card-bodies">I craft bold, modern visuals that capture attention and reflect your
-                                brand identity. From logos and social media content to posters and web graphics, my
-                                designs
-                                communicate your message and engage your audience.
+                            <p class="card-bodies">Booking systems, contact forms, maps, payments, and custom
+                                functionality tailored to your business needs using clean, reliable solutions.
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        <div class="cardy services-cardy h-100">
-                            <p class="card-titles"><i class="fas fa-bullhorn pe-3 services-icons"></i>Digital Marketing
-                            </p>
-                            <p class="card-bodies">I create and manage targeted ad campaigns that help businesses reach
-                                the
-                                right audience and increase sales. My expertise in Meta Ads ensures optimized budgets,
-                                strong performance, and real growth for your brand.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        <div class="cardy services-cardy h-100">
-                            <p class="card-titles"><i class="fas fa-laptop-code pe-3 services-icons"></i>Web Design</p>
-                            <p class="card-bodies">I design clean, modern websites that deliver a professional first
-                                impression. With a focus on user experience, I plan layouts, design mockups, and build
-                                smooth interfaces that turn visitors into customers.
-                            </p>
-                        </div>
-                    </div>
+
                 </div>
-            </div>
 
+            </div>
 
         </section>
 
-
-
-
         <!------                                              Portfolio                                            ------>
-
-
-
-
 
         <hr class="separate-lines container" id="portfolio">
         </hr>
-
 
         <section>
 
@@ -455,13 +389,15 @@
             <div class="container">
                 <div id="portfolio-countr"
                     class="row cards-container py-2 justify-content-center media-queries-paddings">
-                    <!-- Projects will be loaded here by script.js -->
+
+                    <!-- Projects will be loaded here through project.js -->
+
                 </div>
             </div>
 
             <div class="row justify-content-center mt-4 mb-5">
                 <div class="col-auto">
-                    <center class="submit-button">
+                    <div class="submit-button">
                         <a href="portfolio.html" class="cursor-pointer-portfolio">
                             <span></span>
                             <span></span>
@@ -469,11 +405,10 @@
                             <span></span>
                             Show More
                         </a>
-                    </center>
+                    </div>
                 </div>
             </div>
 
-            <!-- Generic Modal -->
             <div class="modal fade main-modal-div modal-body-main" id="project-modal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog portfolio-popups my-0">
                     <div class="modal-content">
@@ -497,7 +432,7 @@
                                 <p id="modal-details-list" style="list-style: none;"></p>
 
                                 <h5 class="project-details-min-titles">Project Overview</h5>
-                                <p id="modal-description"></p>
+                                <p id="modal-overview"></p>
 
                                 <h5 class="project-details-min-titles">Technologies & Tools</h5>
                                 <p id="modal-tech-list" style="list-style: none;"></p>
@@ -518,24 +453,17 @@
 
         </section>
 
-
-
         <!--                                              Contact                                              -->
-
 
         <hr class="separate-lines container" id="contact">
         </hr>
 
-
         <footer class="container">
-
 
             <h2 class="text-center pb-3 fw-bold main-section-titles">Get in touch with me</h2>
             <h4 class="text-center pb-4 fw-bold lil-title-about-me">Fast delivery & Fair prices</h4>
 
-
             <div class="row justify-content-center contact_form_area">
-
                 <div class="contact-form">
                     <form class="px-4 pt-3 pb-2">
                         <div class="input-box">
@@ -554,7 +482,7 @@
                             <input type="text" name="" id="message" required>
                             <label>Message</label>
                         </div>
-                        <center class="submit-button">
+                        <div class="submit-button">
                             <a onclick="sendMail()" class="cursor-pointer-portfolio">
                                 <span></span>
                                 <span></span>
@@ -562,16 +490,13 @@
                                 <span></span>
                                 Submit
                             </a>
-                        </center>
+                        </div>
                     </form>
                 </div>
-
-
             </div>
 
             <div class="row justify-content-center">
                 <div class="social-buttons social-buttons-login-box">
-
 
                     <a href="https://github.com/SaadTebba" target="_blank" class="social-button github">
                         <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19">
@@ -580,6 +505,7 @@
                             </path>
                         </svg>
                     </a>
+
                     <a href="https://www.linkedin.com/in/saad-tebba-9b1b90298/" target="_blank"
                         class="social-button linkedin">
                         <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -594,6 +520,7 @@
                             </g>
                         </svg>
                     </a>
+
                     <a href="https://web.facebook.com/profile.php?id=100083027896967" target="_blank"
                         class="social-button facebook">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -606,6 +533,7 @@
                             </g>
                         </svg>
                     </a>
+
                     <a href="https://www.instagram.com/saad.tebba" target="_blank" class="social-button instagram">
                         <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -645,15 +573,10 @@
                         </svg>
                     </a>
 
-
-
-
-
                 </div>
             </div>
 
             <h4 class="text-center pb-4 fw-bold lil-title-about-me mb-0">Designed & Developed By Saad</h4>
-
 
         </footer>
 
@@ -672,7 +595,7 @@
         </svg>
     </button>
 
-    <!-- ================================================ SCRIPTS ================================================ -->
+    <!--                                                Scripts                                                -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js" defer></script>
@@ -682,13 +605,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
         defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MGP6JQRF6"></script>
     <script src="projects.js" defer></script>
     <script src="script.js" defer></script>
 
+    <!------                       Google Analytics                     ------>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7MGP6JQRF6');
+    </script>
+
 </body>
-
-
-
-
 
 </html>

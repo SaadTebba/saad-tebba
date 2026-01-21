@@ -1,7 +1,7 @@
 const projects = [
     {
         id: "espresso",
-        title: "Espresso Essence – Landing Pages",
+        title: "Espresso Essence - Landing Pages",
         category: "Coffee / Service",
         image1: "Images/Portfolio/espresso-essence1.webp",
         image2: "Images/Portfolio/espresso-essence2.webp",
@@ -9,9 +9,8 @@ const projects = [
         role: "Web Developer",
         date: "December 2025 · 2 weeks",
         sector: "Coffee / Service",
-        team: "1 member",
-        overview: "Developed two landing pages — one for the brand and one for a specific service — with high‑impact visuals and straightforward messaging.",
-        tech: ["Mailerlite", "HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
+        overview: "Developed two high‑impact landing pages for a specialty coffee brand, one for the overall brand presence, and one focused on a key service offering. The goal was to showcase the brand’s identity, attract new customers, and increase engagement. I crafted clean, visually appealing layouts with clear calls-to-action, ensuring visitors could easily understand the brand story and take action. The pages were fully responsive, fast-loading, and optimized for desktop and mobile audiences.",
+        tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Clean conversion‑focused layouts", "Integrated with Mailerlite forms", "Fast load and responsive design"],
         process: "Designed and implemented high-conversion landing pages focusing on brand aesthetics and user engagement.",
         impact: "Increased engagement and lead capture through simplified, attractive landing experiences."
@@ -26,7 +25,6 @@ const projects = [
         role: "Web Designer & Front‑End Developer",
         date: "January 2026 · 3 weeks",
         sector: "Restaurant / Hospitality",
-        team: "1 member",
         overview: "Redesigned the Chicken Delight websites to modernize their online presence, improve usability, and create a responsive, engaging experience for customers. Converted a static HTML design into a custom WordPress theme, integrating WooCommerce and custom plugins to streamline ordering and content management.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind", "WordPress", "WooCommerce"],
         features: ["Fully responsive design for desktop and mobile", "Modern layout with clear menu and ordering flow", "Custom WordPress theme with integrated WooCommerce", "Smooth navigation and interactive elements"],
@@ -43,7 +41,6 @@ const projects = [
         role: "Full Stack Developer",
         date: "October 2025 · 1 month",
         sector: "Real Estate",
-        team: "1 member",
         overview: "Complex real estate site with listings, search filters, and backend integration. Converted to WordPress for easy content management.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind", "WordPress"],
         features: ["Property listing modules", "Search and filtering", "Admin content control"],
@@ -60,7 +57,6 @@ const projects = [
         role: "Web Designer & Front‑End Developer",
         date: "September 2025 · 3 weeks",
         sector: "Education / Preschool",
-        team: "1 member",
         overview: "Redesigned the kindergarten’s online presence to improve clarity, layout, and branding. The focus was on creating a friendly, readable, and accessible one‑page layout that reflects a child‑centric institution.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Clean, responsive layout for all devices", "Updated visual hierarchy and typography", "Smooth interactions and navigation"],
@@ -77,7 +73,6 @@ const projects = [
         role: "Full Stack Developer",
         date: "August 2025 · 2 months",
         sector: "Healthcare Tech",
-        team: "1 member",
         overview: "Developed a comprehensive dashboard for doctors to track appointments, patients, schedules, messages, and transactions with custom WordPress plugins and React components.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind", "React JS", "PHP", "WordPress"],
         features: ["Appointment & schedule management", "Messaging system", "Patient tracking"],
@@ -94,7 +89,6 @@ const projects = [
         role: "Web Developer",
         date: "November 2025 · 1 week",
         sector: "Travel / Services",
-        team: "1 member",
         overview: "Built a responsive showcase site emphasizing travel services and key offerings.",
         tech: ["HTML5", "CSS3", "JS", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Responsive layout", "Service overview"],
@@ -111,7 +105,6 @@ const projects = [
         role: "Front‑End Developer",
         date: "September 2025 · 4 weeks",
         sector: "[Use public info if available]",
-        team: "1 member",
         overview: "Developed a responsive showcase site to highlight the brand and services.",
         tech: ["HTML5", "CSS3", "JS", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Responsive design", "Service highlights"],
@@ -128,7 +121,6 @@ const projects = [
         role: "E-Commerce Developer",
         date: "2024",
         sector: "Retail",
-        team: "1 member",
         overview: "Niche store for MacBook users.",
         tech: ["WooCommerce"],
         features: ["Product configuration", "Apple-style aesthetics", "Secure checkout"],
@@ -145,7 +137,6 @@ const projects = [
         role: "Full Stack Developer, UX/UI Designer",
         date: "April 2024 · 3 weeks",
         sector: "Education / Vocational Training",
-        team: "1 member",
         overview: "Marzouk Formation is a WordPress website built entirely by me. The site offers services to help people secure work contracts in Germany.",
         tech: ["Figma", "WordPress", "PHP", "HTML5/CSS3", "JavaScript"],
         features: ["Multilingual content (AR/FR/DE)", "Eight vocational domains", "Responsive design"],
@@ -162,7 +153,6 @@ const projects = [
         role: "Web Developer",
         date: "January 2026 · 1 week",
         sector: "Café / Hospitality",
-        team: "1 member",
         overview: "Built a showcase website to present the café’s offerings, atmosphere, and contact details with a focus on visual appeal and cross‑device performance.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Responsive layout for all screens", "Highlighted services and menus", "Contact and location focus"],
@@ -179,7 +169,6 @@ const projects = [
         role: "Front‑End Developer",
         date: "December 2025 · 4 weeks",
         sector: "Restaurant / Hospitality",
-        team: "1 member",
         overview: "Created a responsive showcase site for the Amsterdam restaurant, emphasizing menu, ambiance, and reservations info for local and visiting diners.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Mobile‑optimized design", "Highlight sections for menu and ambience", "Contact and reservation info"],
@@ -196,7 +185,6 @@ const projects = [
         role: "Front‑End Developer",
         date: "October 2025 · 2 weeks",
         sector: "Restaurant / Hospitality",
-        team: "1 member",
         overview: "Developed a fully responsive site to showcase the restaurant’s menu, story, and ambiance. The design emphasizes readability and user engagement for both diners and search traffic.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Mobile‑first responsive design", "Menu highlights with clear calls to action", "Fast‑loading performance"],
@@ -213,7 +201,6 @@ const projects = [
         role: "Front‑End Developer",
         date: "September 2025 · 1 month",
         sector: "Café / Hospitality",
-        team: "1 member",
         overview: "Built a responsive showcase site to present the café’s offerings and atmosphere, with emphasis on visuals and ease of navigation.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Responsive layout", "Clear service descriptions", "Fast, lightweight pages"],
@@ -230,7 +217,6 @@ const projects = [
         role: "Web Developer",
         date: "August 2025 · 3 weeks",
         sector: "Café / Hospitality",
-        team: "1 member",
         overview: "Developed a responsive showcase site tailored for the café’s brand and local visitor needs.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Mobile‑friendly layout", "Highlight of specialties and atmosphere", "Contact info focus"],
@@ -247,7 +233,6 @@ const projects = [
         role: "Front‑End Developer",
         date: "November 2025 · 2 weeks",
         sector: "Restaurant / Cultural Cuisine",
-        team: "1 member",
         overview: "Showcase site for a UK restaurant specializing in Nigerian cuisine, focusing on menu and cultural experience.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Responsive design", "Menu and culture focus", "Visual branding"],
@@ -264,7 +249,6 @@ const projects = [
         role: "Front‑End Developer",
         date: "January 2026 · 3 days",
         sector: "Service/Communications",
-        team: "1 member",
         overview: "Landing page promoting call answering services with clear messaging and contact focus.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Quick info delivery", "Responsive layout"],
@@ -281,7 +265,6 @@ const projects = [
         role: "Web Developer",
         date: "October 2025 · 1 week",
         sector: "Fitness / Sports",
-        team: "1 member",
         overview: "Built a responsive site to present class info, schedules, and club details for the fitness community.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Mobile‑friendly layout", "Service info focus"],
@@ -298,7 +281,6 @@ const projects = [
         role: "WordPress Developer",
         date: "September 2025 · 2 weeks",
         sector: "Restaurant / Reservations",
-        team: "1 member",
         overview: "Developed a restaurant site with Elementor including reservation system, menu admin, and login/signup features.",
         tech: ["WordPress", "Elementor", "JS", "Tailwind", "Bootstrap"],
         features: ["Reservations", "Menu management"],
@@ -315,7 +297,6 @@ const projects = [
         role: "Web Developer",
         date: "August 2025 · 1 month",
         sector: "Education / Services",
-        team: "1 member",
         overview: "Responsive site for a language and work placement center to highlight services and programs.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Service overview", "Contact focus"],
@@ -332,7 +313,6 @@ const projects = [
         role: "Web Developer",
         date: "December 2025 · 1 week",
         sector: "Tourism",
-        team: "1 member",
         overview: "Showcase site for tourism services in Tangier with responsive layout and clear service descriptions.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Mobile‑friendly layout", "Tour highlight sections"],
@@ -349,7 +329,6 @@ const projects = [
         role: "Web Developer",
         date: "November 2025 · 3 weeks",
         sector: "Retail / Artisan",
-        team: "1 member",
         overview: "Showcase site for a local handicrafts store, highlighting products and store identity.",
         tech: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Tailwind"],
         features: ["Lightweight, responsive layout", "Product showcases"],
@@ -366,7 +345,6 @@ const projects = [
         role: "Full Stack Developer & Web Designer",
         date: "June 2023 · 2 months",
         sector: "Healthcare / Local Services",
-        team: "1 member",
         overview: "This web application helps users in my city and country find doctors nearby, check their availability schedules, read reviews, and access detailed information about their practice locations.",
         tech: ["Figma", "PHP (OOP)", "MySQL", "Bootstrap", "jQuery"],
         features: ["Search dentists by location", "View real-time availability", "Access detailed profiles"],
@@ -383,7 +361,6 @@ const projects = [
         role: "Front-End Developer & Web Designer",
         date: "September 2024 · 1 month",
         sector: "E-Commerce / Pets",
-        team: "1 member",
         overview: "Feathers Nest is a front-end e-commerce website focused on selling pet supplies. Includes a blog section.",
         tech: ["Figma", "Canva", "HTML5", "CSS3", "Bootstrap", "Tailwind"],
         features: ["Clean responsive design", "Attractive product sections", "Blog area"],
@@ -400,7 +377,6 @@ const projects = [
         role: "E-Commerce Owner & Store Designer",
         date: "December 2023 · 2 weeks",
         sector: "Online Retail",
-        team: "1 member",
         overview: "Souq Saad is an e-commerce website I built using YouCan. Designed to offer a clean, modern shopping experience.",
         tech: ["YouCan", "Canva", "Photoshop", "Figma"],
         features: ["Personalized color palette", "Custom logo and banners", "Mobile-friendly"],
@@ -511,9 +487,38 @@ function populateModal(project) {
     // Tech Stack
     if (techList) {
         techList.innerHTML = "";
+
+        // Icon and Color Mapping
+        const techData = {
+            "HTML5": { icon: "fa-brands fa-html5", color: "#E34F26" },
+            "CSS3": { icon: "fa-brands fa-css3-alt", color: "#1572B6" },
+            "JavaScript": { icon: "fa-brands fa-js", color: "#F7DF1E" },
+            "JS": { icon: "fa-brands fa-js", color: "#F7DF1E" },
+            "jQuery": { icon: "fa-solid fa-code", color: "#0769AD" },
+            "Bootstrap": { icon: "fa-brands fa-bootstrap", color: "#7952B3" },
+            "Tailwind": { icon: "fa-solid fa-wind", color: "#06B6D4" },
+            "React JS": { icon: "fa-brands fa-react", color: "#61DAFB" },
+            "Node JS": { icon: "fa-brands fa-node-js", color: "#339933" },
+            "PHP": { icon: "fa-brands fa-php", color: "#777BB4" },
+            "WordPress": { icon: "fa-brands fa-wordpress", color: "#21759B" },
+            "WooCommerce": { icon: "fa-solid fa-cart-shopping", color: "#96588a" },
+            "MySQL": { icon: "fa-solid fa-database", color: "#4479A1" },
+            "Figma": { icon: "fa-brands fa-figma", color: "#F24E1E" },
+            "Canva": { icon: "fa-solid fa-palette", color: "#00C4CC" },
+            "Photoshop": { icon: "fa-solid fa-image", color: "#31A8FF" },
+            "Elementor": { icon: "fa-brands fa-elementor", color: "#92003B" },
+            "YouCan": { icon: "fa-solid fa-store", color: "#563595" },
+            "Mailerlite": { icon: "fa-solid fa-envelope-open-text", color: "#00A154" },
+            "Python": { icon: "fa-brands fa-python", color: "#3776AB" },
+            "Git/GitHub": { icon: "fa-brands fa-git-alt", color: "#F05032" }
+        };
+
         project.tech.forEach(tech => {
             const li = document.createElement("li");
-            li.innerText = tech;
+            // Check if we have data for this tech, otherwise use defaults
+            const data = techData[tech] || { icon: "fa-solid fa-layer-group", color: "#6c757d" };
+
+            li.innerHTML = `<i class="${data.icon}" style="width: 20px; text-align: center; margin-right: 8px; color: ${data.color};"></i>${tech}`;
             techList.appendChild(li);
         });
     }
@@ -541,7 +546,6 @@ function populateModal(project) {
             <li>👤 Role — ${project.role}</li>
             <li>🗓️ Date & Timeline — ${project.date}</li>
             <li>🎯 Sector — ${project.sector}</li>
-            <li>👥 Team Size — ${project.team}</li>
         `;
     }
 }
